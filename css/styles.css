@@ -4239,12 +4239,24 @@ html.no-csstransitions .s-hero__content {
     background-position: center;
     background-size: cover;
     width: 100%;    /* Slightly larger width to ensure full coverage */
-    height: 100%;   /* Slightly larger height for full coverage */
+    height: 50%;   /* Slightly larger height for full coverage */
     position: absolute;
     top: 0%;       /* Adjust top positioning for fine-tuning */
     left: 0%;      /* Adjust left positioning for fine-tuning */
 }
 
+.responsive-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    object-fit: cover; /* Maintains the aspect ratio and centers the image */
+}
+@media (max-width: 768px) {
+    .responsive-image {
+        object-fit: contain; /* Changes how the image fits in its container */
+        max-height: 300px; /* Limits the image height on smaller screens */
+    }
+}
 
 
 
