@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.s-header');
+        if (window.scrollY > 50) { // You can adjust this value based on when you want the effect to trigger
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Vanna Marie Perfume</title>
+    <meta name="description" content="Welcome">
+    <meta name="author" content="Vanna Marie">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script defer src="js/fontawesome/all.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="icon" href="/favicon.png" type="image/png">
+
+    <link rel="favicon" sizes="180x180" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body id="top">
+
+    
+        <!-- Favicon for regular and high-res devices -->
+        <link rel="icon" href="favicon.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+        <link rel="icon" href="favicon.png" sizes="192x192" type="image/png">
+    
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+        <head>
+            <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+            <style>
+                body {
+                    font-family: 'Lato', sans-serif;
+                }
+            
+                h1, h2, h3 {
+                    font-family: 'Playfair Display', serif;
+                }
+            
+                /* Navbar link color - Default */
+                .s-header__nav a {
+                    color: #FFFFFF; /* Set default link color to white */
+                    text-decoration: none; /* Optional: Remove underline */
+                    padding: 15px 15px; /* Optional: Add some padding to links */
+                }
+            
+                /* Hover effect */
+                .s-header__nav a:hover,
+                .s-header__nav a:focus {
+                    color: #FFFFFF; /* Keep the color white on hover */
+                    text-decoration: underline; /* Optional: Add underline on hover */
+                }
+            
+                /* Active state color (when the link is clicked or active) */
+                .s-header__nav a.active {
+                    color: #FFFFFF; /* Keep the active link color white */
+                }
+            
+                /* On scroll, keep the text white, but the background remains transparent */
+                .s-header.scrolled .s-header__nav a {
+                    color: #FFFFFF; /* Keep color white when scrolled */
+                }
+            
+                /* Navbar container styling */
+                .s-header__nav-wrap {
+                    background-color: transparent !important; /* Ensure the navbar background is transparent */
+                }
+            
+                /* Fix navbar when scrolling - Keep background transparent */
+                .s-header.scrolled {
+                    background-color: transparent !important; /* Keep background transparent when scrolled */
+                    box-shadow: 0 4px 5px ; /* Optional: Add shadow to navbar */
+                }
+            </style>
+            
+            
+        </head>
+        
+        <header class="s-header" style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <div class="s-header__content" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <!-- Logo -->
+                <div class="s-header__logo" style="flex: 0 1 auto;">
+                    <a href="index.html">
+                        <img src="images/finallogo.png" alt="Homepage" style="width: 100px; height: auto;">
+                    </a>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="s-header__nav-wrap" style="flex: 1; display: flex; justify-content: center; align-items: center; height: 60px; background-color: transparent;">
+                    <ul class="s-header__nav" style="list-style: none; display: flex; margin: 0; padding: 0;">
+                        <li><a class="smoothscroll" href="#hero" title="Intro">Home</a></li>
+                        <li><a class="smoothscroll" href="#about" title="About">About</a></li>
+                        <li><a class="smoothscroll" href="#productsCarousel" title="Products">Products</a></li>
+                        <li><a class="smoothscroll" href="#Contact" title="Contact">Contact</a></li>
+                    </ul>
+                </nav>
+        
+                <!-- Back to Home Button -->
+                <div class="back-to-home" style="flex: 1 auto; text-align: right;">
+                    <a href="https://httpskiss.github.io/landing-page/?fbclid=IwY2xjawGbGZVleHRuA2FlbQIxMAABHVRx_ohdu4-sUcb8m4xym4f4w5dkPToStKf_R1MU_7xSIKQRobFS-WsRyQ_aem_SrITWp0DoVqotzR3WLLMlA" class="btn btn--primary btn--small">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 24">
+                            <path d="M24 0l-6 22-8.129-7.239 7.802-8.234-10.458 7.227-7.215-1.754 24-12zm-15 16.668v7.332l3.258-4.431-3.258-2.901z"/>
+                        </svg>
+                        Back To Home
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+    
+        <!-- Mobile Menu Toggle (Ensure it’s only one instance) -->
+        <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+    
+    </header> <!-- end s-header -->
+    
+
+
+  <!-- hero
+================================================== -->
+<section id="hero" class="s-hero target-section" style="position: relative; display: flex; align-items: center; justify-content: space-between; overflow: hidden;">
+
+    <!-- Background Image Carousel -->
+    <div class="carousel-bg">
+        <div class="carousel-slide" style="background-image: url('images/bg1.png');"></div>
+        <div class="carousel-slide" style="background-image: url('images/bg2.png');"></div>
+        <div class="carousel-slide" style="background-image: url('images/bg4.webp');"></div>
+    </div>
+ <!-- Video Play Button -->
+ <div class="s-hero__video" style="display: flex; justify-content: center; align-items: center; padding: 20px; margin-top: 30px;">
+    <a class="s-hero__video-link" href="https://youtu.be/-BcXuqcS0zg?si=DGVNHlcM-KXR5Qpx" data-lity=""
+        style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" style="margin-right: 10px;">
+            <path d="M21 12l-18 12v-24z"/>
+        </svg>
+        <span class="s-hero__video-text" style="font-size: 20px; font-weight: bold;">Play Video</span>
+    </a>
+</div>
+</div>
+    <!-- Responsive Content Section -->
+<div class="responsive-content" style="text-align: center; padding: 40px;">
+    <h1</h1>
+    <p></p>
+    
+   
+</div>
+
+
+   
+
+</section>
+
+<!-- Footer (now without social links) -->
+<footer>
+    <!-- You can keep other footer content here -->
+</footer>
+
+                </div>
+
+            </div>
+        </div>
+
+       
+       
+        
+            
+        
+        
+
+       
+
+    </section> <!-- end s-hero -->
+
+
+    <!-- about
+    ================================================== -->
+    
+    <section id="about" class="s-about">
+
+        
+        <div class="row">
+            <div class="column large-12">
+
+
+                <div class="section-title" data-num="01" data-aos="fade-up">
+                    <h3 class="h6">Who We Are</h3>
+                </div>
+
+            </div>
+            
+
+            <div class="row">
+                <!-- Mission and Vision Text -->
+                <div class="column large-6 w-900-stack s-about__intro-text">
+                    <h1 class="display-1" data-aos="fade-up" style="font-family: 'Playfair Display', serif; text-align: justify;">
+                        Our Mission & Vision
+                    </h1>
+            
+                    <!-- Mission Statement -->
+                    <div class="mission" style="margin-top: 30px;">
+                        <h3 style="font-family: 'Lato', sans-serif; font-size: 24px; color: hsla(345, 93%, 34%, 1);">Mission</h3>
+                        <p class="lead" style="font-size: 16px; color: hsla(345, 93%, 34%, 1); text-align: justify;">
+                            To craft exquisite fragrances that embody elegance, individuality, and self-expression. 
+                            Vanna Marie Perfume is dedicated to providing high-quality, unique scents that elevate 
+                            personal style and enhance confidence, with every spray capturing a story of beauty, 
+                            sophistication, and authenticity.
+                        </p>
+                    </div>
+            
+                    <!-- Vision Statement -->
+                    <div class="vision" style="margin-top: 30px;">
+                        <h3 style="font-family: 'Lato', sans-serif; font-size: 24px; color: hsla(345, 93%, 34%, 1)">Vision</h3>
+                        <p class="lead" style="font-size: 16px; color: hsla(345, 93%, 34%, 1); text-align: justify;">
+                            To be a leading name in the fragrance industry, inspiring a world where personal scent is 
+                            an art form that celebrates individuality and enriches daily life. We envision Vanna Marie 
+                            Perfume as a symbol of elegance and quality, known for its commitment to crafting memorable 
+                            scents that resonate with people from all walks of life.
+                        </p>
+                    </div>
+                </div>
+            
+                <!-- Image Block -->
+<div class="column large-6 w-900-stack s-about__photo-block">
+    <div class="s-about__photo" data-aos="fade-up">
+        <!-- Add your image source here -->
+        <img src="images/TORTOGO, VANNA MARIE .jpg" alt="Vanna Marie Perfume Poster" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;">
+    </div>
+</div>
+
+            </div>
+            
+        
+        
+
+            <div class="s-about__process item-list">
+                <!-- Best Seller Header -->
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <h2 class="best-seller-title">Our Best Seller</h2>
+                </div>
+            
+                <div class="row block-large-1-2 block-tab-full">
+                    <!-- Product 1 -->
+                    <div class="column item item-process" data-aos="fade-up">
+                        <h3 class="item-title">Vanna Marie - Enchanted Rose</h3>
+                        <p style="text-align: justify;">
+                            Description: Enchanted Rose is a soft, romantic fragrance that captures the essence of femininity. 
+                            The opening notes of citrus lead into a heart of delicate rose and jasmine, creating a beautiful,
+                            sophisticated bouquet. The base notes of sandalwood and amber add warmth and elegance, making it a 
+                            perfect scent for both day and night wear.
+                            Why It’s Special: This scent exudes timeless elegance with a modern twist, ideal for women who 
+                            appreciate classic floral notes with a soft, powdery finish.
+                        </p>
+                    </div>
+            
+                    <!-- Product 2 -->
+                    <div class="column item item-process" data-aos="fade-up">
+                        <h3 class="item-title">Vanna Marie - Velvet Orchid</h3>
+                        <p style="text-align: justify;">
+                            Description: Velvet Orchid is a captivating, bold scent that blends the richness of fruits with the 
+                            delicate, exotic florals of orchid and jasmine. The sweet, slightly spicy base of vanilla and tonka 
+                            bean provides an alluring depth, while patchouli adds an earthy element to the fragrance.
+                            Why It’s Special: A scent for the modern woman, Velvet Orchid is perfect for evening wear, offering both 
+                            complexity and warmth that lingers throughout the night.
+                        </p>
+                    </div>
+            
+                    <!-- Product 3 -->
+                    <div class="column item item-process" data-aos="fade-up">
+                        <h3 class="item-title">Vanna Marie - Ocean Breeze</h3>
+                        <p style="text-align: justify;">
+                            Description: Ocean Breeze is a refreshing and invigorating scent that captures the essence of the open sea. 
+                            The citrusy freshness of grapefruit and lemon is balanced with the herbaceous notes of lavender and sage. 
+                            The woody base of cedarwood and sandalwood makes it sophisticated yet invigorating, ideal for a fresh, daily wear.
+                            Why It’s Special: This scent is perfect for active, outdoorsy men who enjoy refreshing and clean fragrances with 
+                            a touch of elegance.
+                        </p>
+                    </div>
+            
+                    <!-- Product 4 -->
+                    <div class="column item item-process" data-aos="fade-up">
+                        <h3 class="item-title">Vanna Marie - Midnight Leather</h3>
+                        <p style="text-align: justify;">
+                            Description: Midnight Leather is a bold and masculine fragrance that embodies strength and sophistication. 
+                            The opening notes of black pepper and bergamot lead into a heart of rich leather and cedarwood, while the base 
+                            notes of amber and musk provide warmth and depth, creating a signature scent that is perfect for evening wear or 
+                            special occasions.
+                            Why It’s Special: Midnight Leather exudes confidence and charm, making it ideal for men who want a powerful yet refined 
+                            scent for a night out or a formal event.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+                <!-- Product 4 -->
+                <div class="column item i
+            
+            
+    </section> <!-- end s-about -->
+
+
+    <!-- services
+    ================================================== -->
+      <!-- Section -->
+      <section id="about" class="s-about">
+
+        
+        <div class="row">
+            <div class="column large-12">
+
+
+                <div class="section-title" data-num="02" data-aos="fade-up">
+                    <h3 class="h6">Our Collection</h3>
+                </div>
+
+            </div>
+
+           
+                
+                
+                
+      
+     
+    </div>
+       
+<div id="productsCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <!-- First Slide (First Row of Images) -->
+        <div class="carousel-item active">
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/5.png" alt="Service Image 1" class="service-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/4.png" alt="Service Image 2" class="service-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/6.png" alt = "Service Image 3" class="service-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Slide (Second Row of Images) -->
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="images/4.png" alt="Service Image 4" class="service-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/5.png" alt="Service Image 5" class="service-image">
+                </div>
+                <div class="col-md-4">
+                    <img src="images/6.png" alt="Service Image 6" class="service-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#productsCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#productsCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Semi-Gallery Section -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/16.png" alt="Gallery Image 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/3.png" alt="Gallery Image 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/4.png" alt="Gallery Image 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/15.png" alt="Gallery Image 4" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/13.png" alt="Gallery Image 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/11.png" alt="Gallery Image 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/10.png" alt="Gallery Image 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/12.png" alt="Gallery Image 4" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/6.png" alt="Gallery Image 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/7.png" alt="Gallery Image 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/8.png" alt="Gallery Image 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-3 mb-4">
+            <img src="images/pictures/9.png" alt="Gallery Image 4" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+    
+    <!-- end s-services -->
+
+   
+                  
+
+        </div> <!-- folio-list -->
+
+    </section> <!-- end s-portfolio -->
+
+
+    <!-- clients
+    ================================================== -->
+    
+
+       
+
+       
+    
+                  
+
+
+    <!-- contact
+    ================================================== -->
+    <section id="Contact">
+    <section class="s-contact">
+
+        <div class="row narrower s-contact__top h-text-center">
+            <div class="column">
+                <h1 class=""h1>Get In Touch</h1>
+                <h6 class="display-6">
+                    We’d love to hear from you! Whether you have a question, feedback, or just want to say hello, feel free to reach out. Our team is here to assist you and make your Vanna Marie experience unforgettable.
+                </h6>
+            </div>
+        </div> <!-- s-footer__top -->
+
+        <div class="row h-text-center">
+            <div class="column">
+                <p class="s-contact__email">
+                    <a href="mailto:tortogovannamarie.gmail.com">@VannaMariePERFUME</a>
+                </p>
+            </div>
+        
+            <!-- Social Media Links Below the Welcome Message -->
+            <div class="social-media-links" style="margin-top: 30px; text-align: center; width: 100%;">
+                <a href="https://www.facebook.com/profile.php?id=100088507729293" target="_blank" style="margin-right: 10px;">
+                    <i class="fab fa-facebook-f" aria-hidden="true" style="font-size: 30px;"></i>
+                </a>
+                <a href="https://x.com/VannaT86682" target="_blank" style="margin-right: 10px;">
+                    <i class="fab fa-twitter" aria-hidden="true" style="font-size: 30px;"></i>
+                </a>
+                <a href="https://www.instagram.com/ohhvan_nana/" target="_blank" style="margin-right: 10px;">
+                    <i class="fab fa-instagram" aria-hidden="true" style="font-size: 30px;"></i>
+                </a>
+            </div>
+        </div>
+        
+        
+
+    </section>  <!-- end s-contact -->
+</section>
+
+    <!-- footer
+    ================================================== -->
+    <footer class="s-footer">
+        <div class="row row-y-top">
+            <div class="column large-8 medium-12">
+                <div class="row">
+                    <div class="column large-7 tab-12 s-footer__block">
+                        <h4 class="h6">Where to Find Us</h4>
+                        <p>
+                            PI, Garcia Street <br>
+                            Naval, Biliran <br>
+                            6543 Philippines <br>
+                            <a href="tel:197-543-2345">+63 9364116047</a>
+                        </p>
+                    </div>
+    
+                    <div class="column large-5 tab-12 s-footer__block">
+                        <h4 class="h6">Follow Us</h4>
+                        <ul class="s-footer__list">
+                            <li><a href="https://www.facebook.com/profile.php?id=100088507729293">Facebook</a></li>
+                            <li><a href="https://x.com/VannaT86682">Twitter</a></li>
+                            <li><a href="https://www.instagram.com/ohhvan_nana?igsh=NzgxZHk5OWtjbzA%3D">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- New container for "Let's Talk" button -->
+            <div class="column large-4 medium-12 s-footer__contact">
+                <a href="mailto:tortogovannamarie@gmail.com" class="btn h-full-width">Let's Talk</a>
+    
+                <!-- All Rights Reserved Section -->
+                <div class="ss-copyright">
+                    <span>2024 Vanna Marie Perfume. All Rights Reserved.</span>
+                </div>
+            </div>
+    
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">top</a>
+            </div> <!-- end ss-go-top -->
+        </div>
+    </footer>
+    
+    
+    
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div> <!-- end photoSwipe background -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
